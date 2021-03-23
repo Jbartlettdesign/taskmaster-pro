@@ -120,7 +120,7 @@ var index = $(this)
 
   tasks[status][index].text = text;
   saveTasks();
-});
+
 // recreate p element
 var taskP = $("<p>")
   .addClass("m-1")
@@ -128,6 +128,7 @@ var taskP = $("<p>")
 
 // replace textarea with p element
 $(this).replaceWith(taskP);
+});
 // due date was clicked
 $(".list-group").on("click", "span", function() {
   // get current text
